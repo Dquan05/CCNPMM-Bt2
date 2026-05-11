@@ -1,0 +1,28 @@
+$kind: http-request
+url: "{{baseUrl}}/api/auth/verify-otp"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "email": "{{email}}",
+      "otp": "{{otp}}"
+    }
+scripts:
+  - type: afterResponse
+    code: >-
+      pm.test('Response is JSON', function () {
+        pm.response.to.be.json;
+      });
+
+
+      const json = pm.response.json();
+
+      if (pm.response.code === 200 && json.data) {
+        pm.collectionVariables.set('accessToken', json.data.accessToken || '');
+        pm.collectionVariables.set('refreshToken', json.data.refreshToken || '');
+      }
+    language: text/javascript
+order: 2000

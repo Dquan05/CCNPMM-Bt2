@@ -1,0 +1,11 @@
+$kind: collection
+description: Postman collection test tất cả routes hiện có của BE.
+variables:
+  baseUrl: http://localhost:3000
+  email: test@example.com
+  password: "123456"
+  newPassword: "1234567"
+  name: Test User
+  otp: "123456"
+  accessToken: ""
+  refreshToken: ""

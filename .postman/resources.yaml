@@ -1,0 +1,13 @@
+# Use this workspace to collaborate
+workspace:
+  id: 47408500-169b-4ab0-8187-0fc8bc08d9c8
+
+localResources:
+  collections:
+    - ..\CollabBrain_BE.postman_collection.json
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+cloudResources:
+  collections:
+    ..\postman\collections\CollabBrain BE: 357d0760-f057-4dce-9b04-73bb4f443215
+    ..\postman\collections\CollabBrain BE Copy: a1f440f1-3056-4e34-a444-bac8c14db3f6
